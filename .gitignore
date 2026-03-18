@@ -1,0 +1,36 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build output (if any)
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Private configs
+*.local
+
+# Large binary files (if exceeded 50MB)
+# Uncomment if needed:
+# *.png
+# *.jpg
+# *.mp4
+# *.wav
