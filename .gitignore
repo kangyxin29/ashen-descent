@@ -28,6 +28,10 @@ build/
 # Private configs
 *.local
 
+# Godot engine files (keep imported/ for assets, editor/shader_cache are user-specific)
+.godot/editor/
+.godot/shader_cache/
+
 # Large binary files (if exceeded 50MB)
 # Uncomment if needed:
 # *.png
