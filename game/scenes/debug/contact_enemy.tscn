@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://contact_enemy"]
+
+[ext_resource type="Script" path="res://scripts/debug/contact_enemy.gd" id="1_contact"]
+[ext_resource type="Texture2D" uid="uid://contact_enemy_placeholder" path="res://assets/art/characters/player/enemy_candidate_7.png" id="2_tex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_contact"]
+size = Vector2(24, 24)
+
+[node name="ContactEnemy" type="Area2D"]
+script = ExtResource("1_contact")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_contact")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_tex")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -14.0
+text = "HAZARD"
+horizontal_alignment = 1

@@ -66,22 +66,33 @@ Start Run → Enter Randomized Rooms → Fight → Choose Reward → Build Evolv
 
 ### 3.1 Technology
 
-- **Platform:** Web browser (HTML5)
-- **Rendering:** Canvas 2D or DOM-based (to be determined)
-- **No build step required** - Static files
-- **Target:** GitHub Pages deployment
+- **Engine:** Godot 4.x (desktop, PC-only target)
+- **Language:** GDScript (primary), Godot Shaders (visual effects)
+- **Build target:** PC executable (export template)
+- **Repository:** Single repo with two sibling folders
+  - `/game` = Godot project (runtime game code, scenes, assets)
+  - `/site` = Static promotional website (bilingual EN/ZH)
 
 ### 3.2 Architecture
 
 ```
 ashen-descent/
-├── index.html          # Main entry
-├── styles.css          # UI styling
-├── script.js           # Game logic
-├── site-content/       # Localization
-│   ├── en.json
-│   └── zh.json
-└── assets/             # Media
+├── game/                    # Godot 4.x project (game runtime)
+│   ├── project.godot        # Engine configuration
+│   ├── scenes/              # Scene (.tscn) files
+│   ├── scripts/              # GDScript (.gd) files
+│   ├── data/                 # Config/data files (tunables)
+│   └── assets/               # Game-specific assets
+│
+├── site/                    # Static promotional website
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── site-content/
+│
+├── docs/                    # Project documentation
+├── DEPLOYMENT.md            # Website deployment guide
+└── ASSET_CREDITS.md         # Asset license tracking
 ```
 
 ---

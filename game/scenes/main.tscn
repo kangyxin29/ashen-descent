@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://main_scene"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://prototype_room" path="res://scenes/room/prototype_room.tscn" id="2_room"]
+[ext_resource type="PackedScene" uid="uid://player_scene" path="res://scenes/player/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://training_dummy" path="res://scenes/debug/training_dummy.tscn" id="4_dummy"]
+[ext_resource type="PackedScene" uid="uid://contact_enemy" path="res://scenes/debug/contact_enemy.tscn" id="5_contact"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="PrototypeRoom" parent="." instance=ExtResource("2_room")]
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+position = Vector2(360, 300)
+
+[node name="TrainingDummy" parent="." instance=ExtResource("4_dummy")]
+position = Vector2(520, 300)
+
+[node name="ContactEnemy1" parent="." instance=ExtResource("5_contact")]
+position = Vector2(280, 300)
+
+[node name="ContactEnemy2" parent="." instance=ExtResource("5_contact")]
+position = Vector2(440, 300)
+
+[node name="DebugLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "HP: 100/100 ST:IDLE ATK:READY DSH:READY IFR:OFF"

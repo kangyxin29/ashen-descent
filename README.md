@@ -26,27 +26,27 @@
 
 ```
 ashen-descent/
-├── index.html              # Main website (bilingual EN/ZH)
-├── styles.css              # Epic dark fantasy styling
-├── script.js               # Language switching, animations, rendering
-├── README.md               # This file
-├── DEPLOYMENT.md           # Git & GitHub Pages guide
-├── ASSET_CREDITS.md        # Asset sources and licenses
-├── .gitignore              # Git ignore rules
 │
-├── site-content/           # All text content
-│   ├── en.json             # English (update this to change text)
-│   └── zh.json             # Simplified Chinese
+├── game/                   # Godot 4.x project (game runtime)
+│   ├── project.godot       # Engine configuration
+│   ├── scenes/             # Scene files (.tscn)
+│   ├── scripts/            # GDScript files (.gd)
+│   ├── data/               # Config/data files
+│   └── assets/             # Game assets
+│
+├── site/                   # Official promotional website
+│   ├── index.html          # Main website
+│   ├── styles.css          # Website styling
+│   ├── script.js           # Language switching, animations
+│   └── site-content/       # EN/ZH text content
 │
 ├── docs/                   # Project documentation
 │   ├── project-plan.md     # Full game specification
 │   ├── roadmap.md          # Version milestones (v0.1 → v3.0)
-│   └── content-guide.md    # How to edit content
+│   └── content-guide.md    # Website content editing guide
 │
-└── assets/                 # (For future game assets)
-    ├── images/
-    ├── icons/
-    └── audio/
+├── DEPLOYMENT.md           # Website deployment guide
+└── ASSET_CREDITS.md        # Asset license tracking
 ```
 
 ---

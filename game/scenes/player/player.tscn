@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://player_scene"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_player"]
+[ext_resource type="Texture2D" uid="uid://player_frame0" path="res://assets/art/characters/player/player_frame0.png" id="2_tex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
+size = Vector2(22, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurtbox"]
+size = Vector2(20, 20)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_tex")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 0)
+current = true
+
+[node name="PlayerHurtbox" type="Area2D" parent="."]
+monitoring = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtbox"]
+shape = SubResource("RectangleShape2D_hurtbox")
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+position = Vector2(20, 0)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
+shape = SubResource("RectangleShape2D_hitbox")
+disabled = true
+
+[node name="HitboxVisual" type="ColorRect" parent="AttackHitbox"]
+offset_left = -11.0
+offset_top = -7.0
+offset_right = 11.0
+offset_bottom = 7.0
+color = Color(1, 0.4, 0.1, 0.0)  # invisible by default (alpha 0)
