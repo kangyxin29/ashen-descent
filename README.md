@@ -58,21 +58,39 @@ Run into the orange enemies to test hurt feedback. Attack the training dummy to 
 
 ---
 
-## Development Documentation
+## Documentation Guide
+
+**New here?** Read [docs/DOCUMENT_INDEX.md](docs/DOCUMENT_INDEX.md) for a complete map of all repository documents and external context files.
+
+**Working on the game?** Start with [CLAUDE.md](CLAUDE.md) — it is the entry point for all AI-assisted development sessions.
+
+### Key Development Docs
 
 | File | Purpose |
 |------|---------|
-| [CLAUDE.md](CLAUDE.md) | **Entry point for AI sessions — read this first** |
-| [docs/PROJECT_LOCK.md](docs/PROJECT_LOCK.md) | Project identity, scope, non-goals |
+| [CLAUDE.md](CLAUDE.md) | **AI session entry point** — read this first |
+| [docs/DOCUMENT_INDEX.md](docs/DOCUMENT_INDEX.md) | **Complete doc index** — find any doc quickly |
 | [docs/ACTIVE_MILESTONE.md](docs/ACTIVE_MILESTONE.md) | Current phase and objectives |
+| [docs/TASK_BOARD.md](docs/TASK_BOARD.md) | Concrete task list (TODO/IN PROGRESS/DONE) |
+| [docs/SESSION_HANDOFF.md](docs/SESSION_HANDOFF.md) | Latest session log (continuity) |
+| [docs/PROJECT_LOCK.md](docs/PROJECT_LOCK.md) | Project identity, scope, non-goals |
 | [docs/ARCHITECTURE_RULES.md](docs/ARCHITECTURE_RULES.md) | Directory structure, script ownership |
-| [docs/TASK_BOARD.md](docs/TASK_BOARD.md) | Concrete task list |
-| [docs/SESSION_HANDOFF.md](docs/SESSION_HANDOFF.md) | Session continuity log |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | Decision history with rationale |
 | [docs/roadmap.md](docs/roadmap.md) | Version milestones |
 | [docs/project-plan.md](docs/project-plan.md) | Full game specification |
 | [game/ASSET_BIBLE.md](game/ASSET_BIBLE.md) | Sprite assignments, import settings |
 | [game/ASSET_CREDITS.md](game/ASSET_CREDITS.md) | Authoritative asset license tracking |
+
+### How Development Docs Work
+
+The repo uses a structured documentation system for AI-assisted iteration:
+
+1. Every session starts at `CLAUDE.md` and reads `docs/ACTIVE_MILESTONE.md` + the latest `SESSION_HANDOFF.md` entry
+2. Tasks are tracked in `TASK_BOARD.md` — small, concrete, one-session-sized items
+3. Decisions are recorded in `DECISIONS.md` with rationale and date
+4. External context files (`.docx` / `.pdf` at repo root) are historical references — the markdown docs above are the primary operational layer
+
+See [docs/DOCUMENT_INDEX.md](docs/DOCUMENT_INDEX.md) for the full picture.
 
 ---
 

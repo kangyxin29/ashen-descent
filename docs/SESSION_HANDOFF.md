@@ -155,4 +155,48 @@ If it feels right, mark DONE in TASK_BOARD.md and proceed to attack feel pass.
 
 ---
 
+### SESSION 2026-03-24 (GitHub sync) — Phase 1.5: Documentation Truth & GitHub Clarity
+
+**Active Milestone:** Phase 1.5 — Prototype Polish & Sustainable Development Foundation
+
+**What was completed:**
+- Final doc truth audit: all docs verified consistent, no conflicts found
+- Created `docs/DOCUMENT_INDEX.md` — GitHub-facing doc index explaining every repo document and external context file
+- Updated `README.md` — added "Documentation Guide" section linking to DOCUMENT_INDEX.md, clarified how development docs work
+- External context files documented in DOCUMENT_INDEX.md: 总指令2.0.docx, continue prompt - Ashen Descent.docx, Ashen_Descent_第一阶段现状总结_交接文档.pdf (二创Rogue.txt not found in repo — noted in doc)
+- Verified: docs/project-plan.md is accurate (Godot 4.6, PC target, /game+/site split) — no outdated browser references found
+- All docs confirmed mutually consistent
+
+**Exact modified files:**
+- `docs/DOCUMENT_INDEX.md` (created)
+- `README.md` (updated — added Documentation Guide section)
+
+**What was verified:**
+- No contradictory planning docs remain
+- No browser/HTML5/runtime assumptions anywhere in active docs
+- Root ASSET_CREDITS.md correctly redirects to game/ASSET_CREDITS.md
+- DEPLOYMENT.md correctly marked deprecated
+- /site was not touched
+- No gameplay code was touched
+
+**What remains uncertain:**
+- Whether 二创Rogue.txt exists (referenced in project but not found in repo) — the policy it encodes is correctly in PROJECT_LOCK.md regardless
+- No remaining doc conflicts identified
+
+**Next recommended step:**
+1. Read CLAUDE.md, docs/ACTIVE_MILESTONE.md, latest SESSION_HANDOFF.md entry
+2. Run `git status` and `git log --oneline -5`
+3. Proceed to playtest/verify the hurt feedback patch (HURT_LOCK_DURATION=0.18s)
+4. If confirmed readable, mark hurt feedback DONE and proceed to attack feel pass
+
+**Copy-pastable next session startup prompt:**
+```
+Read CLAUDE.md, docs/ACTIVE_MILESTONE.md, and the latest entry in docs/SESSION_HANDOFF.md.
+Then run git status and git log --oneline -5.
+Current priority: verify hurt feedback patch (HURT_LOCK_DURATION=0.18s).
+If confirmed, mark DONE in TASK_BOARD.md and proceed to attack feel readability pass.
+```
+
+---
+
 *Append-only log. Do not delete entries.*

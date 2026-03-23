@@ -39,6 +39,9 @@
 - [x] **Update roadmap.md** — note v0.1 features are complete
 - [x] **Deprecate DEPLOYMENT.md** — mark as website-only
 - [x] **Harmonize root ASSET_CREDITS.md** — redirect to game/ASSET_CREDITS.md
+- [x] **Create docs/DOCUMENT_INDEX.md** — GitHub-facing doc index with external context file explanations
+- [x] **Update README.md** — add Documentation Guide section linking to DOCUMENT_INDEX.md
+- [x] **GitHub sync** — verify push-ready state, confirm all docs consistent
 
 ---
 
