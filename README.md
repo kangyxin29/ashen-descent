@@ -1,180 +1,113 @@
-# Ashen Descent
+# Ashen Descent / 灰烬回响
 
-**A Dark Fantasy Action Roguelite**
+**A Dark Fantasy Action Roguelite — Built with Godot 4.6**
 
-[![Status: In Development](https://img.shields.io/badge/status-development-orange.svg)](https://github.com/username/ashen-descent)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
 
-## Welcome to the Rift
+## Project Status: Active Development — Phase 1.5
 
-*Ashen Descent* is a dark pixel-art top-down action roguelite set in the ruins of an ancient sanctuary. Navigate pseudo-randomized rooms, build devastating relic synergies, master deliberate combat, and gradually restore what was lost.
+The game is in early playable prototype state. Current focus is prototype polish and establishing a sustainable development workflow.
 
-**Every death brings restoration closer.**
+**What works:** 8-directional movement, attack (windup/active/recovery), dash with i-frames, hurt/death/respawn, prototype room with floor and walls, test targets (training dummy, contact enemy).
 
----
-
-## Quick Links
-
-- [Official Website](https://username.github.io/ashen-descent) — Live site (update with your GitHub Pages URL)
-- [Documentation](docs/) — Project planning, roadmap, content guide
+**What's next:** Hurt feedback readability, attack feel readability, minimum viable enemy.
 
 ---
 
-## Project Structure
+## Repository Layout
 
 ```
 ashen-descent/
 │
-├── game/                   # Godot 4.x project (game runtime)
+├── game/                   # Godot 4.x project (ACTUAL GAME RUNTIME)
 │   ├── project.godot       # Engine configuration
 │   ├── scenes/             # Scene files (.tscn)
 │   ├── scripts/            # GDScript files (.gd)
-│   ├── data/               # Config/data files
-│   └── assets/             # Game assets
+│   ├── data/               # Config files (tunable values)
+│   └── assets/             # Sprites, audio, Kenney asset packs
 │
-├── site/                   # Official promotional website
-│   ├── index.html          # Main website
-│   ├── styles.css          # Website styling
-│   ├── script.js           # Language switching, animations
+├── site/                   # Promotional website only (NOT game runtime)
+│   ├── index.html          # Open this for website preview
+│   ├── styles.css
+│   ├── script.js
 │   └── site-content/       # EN/ZH text content
 │
-├── docs/                   # Project documentation
-│   ├── project-plan.md     # Full game specification
-│   ├── roadmap.md          # Version milestones (v0.1 → v3.0)
-│   └── content-guide.md    # Website content editing guide
-│
-├── DEPLOYMENT.md           # Website deployment guide
-└── ASSET_CREDITS.md        # Asset license tracking
+├── docs/                   # Game development documentation
+├── CLAUDE.md               # AI session entry point (READ THIS FIRST)
+└── [other root files]
 ```
 
----
+### Important: `/game` is the game, `/site` is the website
 
-## Features
-
-### Player-Facing Website Sections
-
-1. **Hero** — Epic title, tagline, call-to-action
-2. **Overview** — Game description with feature highlights
-3. **World** — Lore about the broken sanctuary
-4. **Mechanics** — The run loop and controls
-5. **Core Systems** — Technical game systems
-6. **Death & Risk** — What you lose vs. keep on death
-7. **Build Archetypes** — Berserker, Warden, Riftwalker
-8. **Boss Encounters** — Multi-phase guardian battles
-9. **Art & Style** — Visual direction and asset strategy
-10. **Development Roadmap** — v0.1 → v3.0 milestones
-11. **8-Week Timeline** — Development plan to v1.0
-
-### Technical Features
-
-- **Bilingual** — English and Simplified Chinese (switch instantly)
-- **Responsive** — Mobile and desktop friendly
-- **Animated** — Scroll reveals, hover effects, particle embers
-- **No Dependencies** — Pure HTML/CSS/JS, no build step
-- **SEO Ready** — Semantic HTML, meta tags
+- **`/game`** — Open in Godot 4.6 to play the game. This is the gameplay runtime.
+- **`/site`** — Static promotional website. No game logic. Pure HTML/CSS/JS.
 
 ---
 
-## Editing Content
+## Controls
 
-### Text Content
+| Action | Key |
+|--------|-----|
+| Move | WASD / Arrow keys |
+| Attack | Z / Space |
+| Dash | Shift |
 
-All visible text is in the JSON files:
-
-- **English:** `site-content/en.json`
-- **Chinese:** `site-content/zh.json`
-
-Edit these files to update any text on the website. Both files must have matching key structures.
-
-### Styling
-
-All visual design is in `styles.css`:
-- CSS variables at the top for colors and fonts
-- Section-specific styles throughout
-- Responsive breakpoints at the bottom
-
-### JavaScript
-
-The `script.js` file handles:
-- Language switching
-- Content rendering from JSON
-- Scroll animations
-- Hero particle effects
+Run into the orange enemies to test hurt feedback. Attack the training dummy to test hitbox.
 
 ---
 
-## Local Preview
+## Development Documentation
 
-### Option A: Direct (Simplest)
+| File | Purpose |
+|------|---------|
+| [CLAUDE.md](CLAUDE.md) | **Entry point for AI sessions — read this first** |
+| [docs/PROJECT_LOCK.md](docs/PROJECT_LOCK.md) | Project identity, scope, non-goals |
+| [docs/ACTIVE_MILESTONE.md](docs/ACTIVE_MILESTONE.md) | Current phase and objectives |
+| [docs/ARCHITECTURE_RULES.md](docs/ARCHITECTURE_RULES.md) | Directory structure, script ownership |
+| [docs/TASK_BOARD.md](docs/TASK_BOARD.md) | Concrete task list |
+| [docs/SESSION_HANDOFF.md](docs/SESSION_HANDOFF.md) | Session continuity log |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | Decision history with rationale |
+| [docs/roadmap.md](docs/roadmap.md) | Version milestones |
+| [docs/project-plan.md](docs/project-plan.md) | Full game specification |
+| [game/ASSET_BIBLE.md](game/ASSET_BIBLE.md) | Sprite assignments, import settings |
+| [game/ASSET_CREDITS.md](game/ASSET_CREDITS.md) | Authoritative asset license tracking |
 
-Open `index.html` in any modern browser.
+---
 
-### Option B: Local Server (Recommended)
+## Current Development Phase: ~1.5
+
+See [docs/ACTIVE_MILESTONE.md](docs/ACTIVE_MILESTONE.md) for full details.
+
+**Phase 1 (Foundation) — COMPLETE:**
+- Movement, attack, dash, hurt/death/respawn, prototype room
+
+**Phase 1.5 (Current) — Polish & Documentation:**
+- Hurt feedback readability, attack feel, documentation system
+
+**Phase 2 (Next) — Minimum viable enemy:**
+- One enemy with simple AI, room spawn system
+
+---
+
+## Playing the Game
+
+1. Open Godot 4.6
+2. Import or open the `game/` directory as a Godot project
+3. Press F5 to run (main scene: `scenes/main.tscn`)
+
+The game opens in a prototype room with a training dummy and two contact enemies.
+
+---
+
+## Playing the Website
 
 ```bash
-cd ashen-descent
+cd ashen-descent/site
 python3 -m http.server 8000
 ```
-
 Then open: http://localhost:8000
-
----
-
-## Deployment to GitHub Pages
-
-### 1. Initialize Git
-
-```bash
-cd ashen-descent
-git init
-git add .
-git commit -m "Initial commit: Ashen Descent official website"
-git branch -M main
-```
-
-### 2. Create GitHub Repository
-
-1. Go to [github.com/new](https://github.com/new)
-2. Name: `ashen-descent`
-3. Keep **Public**
-4. Click **Create repository**
-
-### 3. Connect and Push
-
-```bash
-git remote add origin https://github.com/YOURUSERNAME/ashen-descent.git
-git push -u origin main
-```
-
-### 4. Enable GitHub Pages
-
-1. Go to your repository → **Settings**
-2. Scroll to **GitHub Pages**
-3. Source: **main** branch → **Save**
-4. Wait 2 minutes → Your site is live!
-
----
-
-## Future Updates
-
-### Making Changes
-
-```bash
-git add .
-git commit -m "Describe your changes"
-git push origin main
-```
-
-GitHub Pages auto-updates after each push.
-
-### Adding New Content
-
-1. Edit `site-content/en.json` and `site-content/zh.json`
-2. If adding new sections, update `index.html` with new section markup
-3. Add rendering function in `script.js`
-4. Test locally, then push
 
 ---
 
@@ -182,19 +115,18 @@ GitHub Pages auto-updates after each push.
 
 | Version | Status | Description |
 |---------|--------|-------------|
-| v0.1 | Planned | Foundation and core prototype |
-| v1.0 | Planned | Complete playable demo |
-| v1.5 | Planned | Polish and feel pass |
+| v0.1 | **Complete** | Foundation: movement, attack, dash, hurt, prototype room |
+| v1.0 | Planned | Complete playable demo: enemy types, boss, room loop, hub |
+| v1.5 | Planned | Feel & presentation polish |
 | v2.0 | Planned | Signature features |
 | v3.0 | Optional | Content expansion |
 
 ---
 
-## License
+## Asset Credits
 
-This is a personal project. Code is open for reference.
-
-Game assets are used under their respective licenses as documented in [ASSET_CREDITS.md](ASSET_CREDITS.md).
+All game assets are from Kenney.nl packs (CC0/public domain).
+**Authoritative source:** [game/ASSET_CREDITS.md](game/ASSET_CREDITS.md)
 
 ---
 

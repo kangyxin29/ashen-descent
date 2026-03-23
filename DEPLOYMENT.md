@@ -1,5 +1,15 @@
 # Deployment Guide
 
+> **DEPRECATED — Website-only deployment guide.**
+> The `/site` directory is the promotional website and deploys to GitHub Pages.
+> The `/game` directory is the Godot game runtime. It does NOT deploy via this guide.
+> For Godot game export, use Godot's export templates (File → Export → PC).
+> This file is kept for historical reference but the directory structure described here is **outdated**.
+
+---
+
+*Everything below this line is historical/deprecated.*
+
 This guide explains how to:
 1. Preview the website locally
 2. Initialize Git and connect to GitHub

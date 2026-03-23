@@ -18,23 +18,22 @@ Detailed roadmap for all planned versions.
 
 ## v0.1 - Preparation Build
 
+**Status: COMPLETE (2026-03)**
+
 **Purpose:** Establish the foundation—movement, combat skeleton, art standards, and project infrastructure.
 
-### Must Have
-- Movement system (8-directional with acceleration)
-- Basic attack (windup, active, recovery frames)
-- 1 Enemy type (prototype)
-- Placeholder art standards document
-- Project folder structure finalized
-- Development standards (code style, git workflow)
-
-### Optional
-- Polish animations
-- Sound effects placeholder
-- Particle systems prototype
+### Completed
+- Movement system (8-directional with acceleration) ✓
+- Basic attack (windup, active, recovery frames) ✓
+- 1 Enemy type (prototype — contact enemy, stationary) ✓
+- Placeholder art standards document ✓ (see `game/ASSET_BIBLE.md`)
+- Project folder structure finalized ✓
+- Development standards established ✓
 
 ### Why This Matters
 A stable foundation prevents costly rewrites. The team must agree on core systems before writing content. No matter how exciting the vision, a shaky base will collapse.
+
+**Note:** As of March 2026, the project is in Phase ~1.5 (polishing the v0.1 prototype and establishing sustainable development workflow). The features above are implemented. See `docs/ACTIVE_MILESTONE.md` for current phase details.
 
 ---
 
