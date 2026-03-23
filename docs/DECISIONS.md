@@ -9,6 +9,30 @@
 
 ---
 
+### DECISION-006 — Hurt Feedback Readability Patch
+
+**Date:** 2026-03-24
+**Status:** DECIDED (patch applied, needs playtest verification)
+
+**Decision:** Increase `HURT_LOCK_DURATION` from `0.12s` to `0.18s` in `game/data/hurt_config.gd`.
+
+**Rationale:**
+- The original 0.12s lock was so short it may not read as a deliberate hit-stop moment
+- A longer lock gives the player a more perceptible freeze when damaged, making the hurt register clearly
+- This is the smallest possible hurt feedback change: one constant, no structural changes
+
+**Why not other changes:**
+- Flash toggle interval (80ms): could be slower (100-120ms) for less disorienting flicker, but this is a separate tuning decision — better to change one thing at a time
+- Screen shake weight (5.0): could be heavier (6-8), but changing too many things at once makes it impossible to attribute improvements
+- Flash duration (0.55s): keeping this — it gives enough i-frame window and the post-lock movement while flashing is good feedback
+
+**Next decision needed:** After playtest, may need to:
+- Adjust `HURT_LOCK_DURATION` up/down if 0.18s doesn't feel right
+- Tune flash toggle interval (try 0.10s instead of 0.08s)
+- Tune screen shake weight separately
+
+---
+
 ### DECISION-001 — Phase 1.5 Documentation Foundation
 
 **Date:** 2026-03-24

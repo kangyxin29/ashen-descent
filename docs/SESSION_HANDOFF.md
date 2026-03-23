@@ -115,4 +115,44 @@ Current priority: [from TASK_BOARD.md].
 
 ---
 
+---
+
+### SESSION 2026-03-24 (continued) — Phase 1.5: Hurt Feedback Patch
+
+**Active Milestone:** Phase 1.5 — Prototype Polish & Sustainable Development Foundation
+
+**What was completed:**
+- Hurt feedback readability patch: `HURT_LOCK_DURATION` increased from `0.12s` to `0.18s` in `game/data/hurt_config.gd`
+- This extends the movement-freeze moment when hit, making the damage register more clearly
+- One-line change, no structural modifications
+
+**Exact modified files:**
+- `game/data/hurt_config.gd` — `HURT_LOCK_DURATION: 0.12 → 0.18`
+
+**What was verified:**
+- Change is isolated to one tunable constant
+- No other hurt feedback logic was touched
+- No changes to flash timing, screen shake, or invulnerability window
+
+**What remains uncertain:**
+- Whether 0.18s is the right value — needs playtest to confirm it reads as impactful but not sluggish
+- Flash toggle interval (80ms, 7 flashes in 0.55s) may still be too fast — may need tuning in a future session
+- Screen shake weight (5.0) may need separate tuning pass
+
+**Next recommended step:**
+1. Playtest the hurt feedback: walk into a contact enemy, observe whether the lock moment is now more perceptible
+2. If 0.18s feels right, mark hurt feedback readability as DONE in TASK_BOARD.md
+3. If it feels too long or too short, adjust `HURT_LOCK_DURATION` in small increments (0.15 or 0.20)
+4. After hurt feedback is stable, proceed to **Attack feel readability pass**
+
+**Copy-pastable next session startup prompt:**
+```
+Read CLAUDE.md, docs/ACTIVE_MILESTONE.md, and the latest entry in docs/SESSION_HANDOFF.md.
+Then run git status and git log --oneline -5.
+Current priority: verify hurt feedback readability patch (HURT_LOCK_DURATION=0.18s).
+If it feels right, mark DONE in TASK_BOARD.md and proceed to attack feel pass.
+```
+
+---
+
 *Append-only log. Do not delete entries.*

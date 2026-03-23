@@ -46,11 +46,12 @@
 
 #### TODO (ordered by priority)
 
-- [ ] **Hurt feedback readability pass**
+- [ ] **Hurt feedback readability pass** — IN PROGRESS (patch applied, pending playtest verification)
   - Goal: player clearly perceives when hit
-  - Tune: hurt lock duration, flash interval, screen shake weight
-  - File: `game/scripts/player/player.gd`, `game/data/hurt_config.gd`
-  - Verify: hit contact enemy, observe clarity of feedback
+  - Patch applied: `HURT_LOCK_DURATION 0.12s → 0.18s` in `hurt_config.gd`
+  - Still uncertain: whether 0.18s is the right value, flash toggle speed (80ms), screen shake weight (5.0)
+  - Verify: hit contact enemy, observe whether lock moment is perceptible
+  - Next: if 0.18s feels right, mark DONE; if not, tune further in small increments
 
 - [ ] **Attack feel readability pass**
   - Goal: windup is clearly telegraphed, active window is fair
